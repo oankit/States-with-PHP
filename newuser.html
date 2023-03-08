@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="scripts/validate.js"></script>
+
+<!-- Password checking script here!! -->
+<script type="text/javascript">;
+    function checkPasswordMatch(e){
+      var password= document.getElementById("password");
+    var passwordCheck= document.getElementById("password-check")
+      if(password.value!= passwordCheck.value){
+      makeRed(password);
+      makeRed(passwordCheck);
+      passwordCheck.setCustomValidity('passwords do not match, reenter password');
+      e.preventDefault();
+    }
+    else if (password.value== passwordCheck.value){
+      form.submit();
+    }
+
+    }
+</script>
+</head>
+
+<body>
+
+<form method="post" action="newuser.php" id="mainForm" enctype="multipart/form-data" >
+  First Name:<br>
+  <input type="text" name="firstname" id="firstname" class="required">
+  <br>
+  Last Name:<br>
+  <input type="text" name="lastname" id="lastname" class="required">
+  <br>
+  Username:<br>
+  <input type="text" name="username" id="username" class="required">
+  <br>
+  email:<br>
+  <input type="text" name="email" id="email" class="required">
+  <br>
+  Password:<br>
+  <input type="password" name="password" id="password" class="required">
+  <br>
+  Re-enter Password:<br>
+  <input type="password" name="password-check" id="password-check" class="required">
+  <br>
+  Select Profile image to upload:
+  <br>
+  <input id='max' type='hidden' name='MAX_FILE_SIZE' value='100000'>
+  <input type="file" name="userImage" id="userImage" accept=".png, .jpg, .gif">
+  <br>
+  <br>
+  <input type="submit" value="Create New User">
+</form>
+</body>
