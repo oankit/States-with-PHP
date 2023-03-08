@@ -1,2 +1,2 @@
 # States-with-PHP
-This project explores managing state between pages in PHP using $_SESSION. It involves modifying existing pages for user login and navigation, uploading and storing files in a database, and displaying images. 
+This project focuses on investigating how to manage state between pages in PHP using the $_SESSION superglobal. The main objective is to modify the existing pages to allow users to login and navigate through different pages, provided that they are valid and logged-in users. Additionally, the project involves uploading a file to the server, storing it in the database, and being able to retrieve and display the image.
